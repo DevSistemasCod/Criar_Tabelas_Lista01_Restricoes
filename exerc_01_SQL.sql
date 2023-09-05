@@ -9,7 +9,7 @@ CREATE TABLE funcionario (
     codigo_funcionario INT CHECK(codigo_funcionario >= 0),
     nome_funcionario VARCHAR(50) NOT NULL,
     cargo VARCHAR(100) NOT NULL,
-    sigla_depto VARCHAR(15) UNIQUE NOT NULL,
+    sigla_depto VARCHAR(15) NOT NULL,
     PRIMARY KEY (codigo_funcionario, nome_funcionario),
     FOREIGN KEY (sigla_depto) REFERENCES departamento(sigla_depto)
 );
